@@ -5,7 +5,7 @@ if number < 0:
     number = number * -1
     number1 = number % 10
     number1 = number1 * -1
-    number =  number * -1
+    number = number * -1
 else:
     number1 = number % 10
 if (number1 < 6 and number1 != 0):
