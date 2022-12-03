@@ -4,7 +4,7 @@ def no_c(my_string):
     if my_string:
         i = 0
         for s in my_string:
-            if s in "sS":
+            if s in "cC":
                 del my_string[i]
             i = i + 1
         return my_string
