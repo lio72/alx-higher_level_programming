@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    """Prints a matrix of ints"""
-    for row in matrix:
-        for i in row:
-            if i != row[-1]:
-                print("{:d}".format(i), end="")
-            else:
-                print("{:d}".format(i), end="")
-        print()
+    """this function read values in interger an print it"""
+    if matrix:
+        for s in matrix:
+            i = 0
+            for v in s:
+                print("{:d}".format(v), end=" " if i < len(s) - 1 else "")
+                i = i + 1
+            print("")
