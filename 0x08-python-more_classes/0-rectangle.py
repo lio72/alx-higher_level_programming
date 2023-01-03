@@ -2,8 +2,8 @@
 
 """ function to create class"""
 
-class Rectangle:
 
+class Rectangle:
     """ my empty class"""
 
     pass
