@@ -1,2 +1,2 @@
 -- List data bases.
-show databases;
+SHOW DATABASES;
