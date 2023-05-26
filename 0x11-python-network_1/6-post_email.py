@@ -1,25 +1,15 @@
 #!/usr/bin/python3
+"""Sends a POST request to a given URL with a given email.
+Usage: ./6-post_email.py <URL> <email>
+  - Displays the body of the response.
 """
-    Define peak-finding algorithm.
-"""
+import sys
+import requests
 
 
-def find_peak(list_of_integers):
-    """Return peak in a list of unsorted integers."""
-    if list_of_integers == []:
-        return None
+if __name__ == "__main__":
+    url = sys.argv[1]
+    value = {"email": sys.argv[2]}
 
-    size = len(list_of_integers)
-    if size == 1:
-        return list_of_integers[0]
-    elif size == 2:
-        return max(list_of_integers)
-
-    mid = int(size / 2)
-    peak = list_of_integers[mid]
-    if peak > list_of_integers[mid - 1] and peak > list_of_integers[mid + 1]:
-        return peak
-    elif peak < list_of_integers[mid - 1]:
-        return find_peak(list_of_integers[:mid])
-    else:
-        return find_peak(list_of_integers[mid + 1:])
+    r = requests.post(url, data=value)
+    print(r.text)
